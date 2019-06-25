@@ -17,7 +17,7 @@ TARGETFILE=`basename $PROGRAM_NAME`
 
 #Assemble
 echo "Assembling and linking..."
-ca65 "$PROGRAM_NAME".s -l "$PROGRAM_NAME"-listing.txt
+ca65 "$PROGRAM_NAME".s -l "$PROGRAM_NAME"-listing.txt --target apple2
 ld65 "$PROGRAM_NAME".o -o "$PROGRAM_NAME" -C linker.config --dbgfile "$PROGRAM_NAME"-debug.txt
 
 echo "Packaging disk image..." 
